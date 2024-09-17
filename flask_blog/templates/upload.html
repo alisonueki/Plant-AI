@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/upload.css') }}">
+    </head>
+    <body id="home">
+        <nav class="navbar">
+            <!-- LOGO -->
+            <div class="logo"><img src="{{ url_for('static', filename='img/bulba_logo.png') }}" style="width: 100px;"></div>
+            <!-- NAVIGATION MENU -->
+            <ul class="nav-links">      
+              <!-- NAVIGATION MENUS -->
+              <div class="menu">     
+                <li><a href="/">Home</a></li>
+                <li><a href="/upload">Upload</a></li>
+                <li><a href="/response">Response</a></li>
+                <li><a href="/response">Contact</a></li>
+              </div>
+            </ul>
+        </nav>
+        <div style="height: 100px;">
+            <p>Dr. Bulba would like to help you on your journey to caring for your plant! 1.Please take a picture of a leaf on your plant</p>
+            <p>1.Please take a picture of a leaf on your plant</p>
+            <p>2. Upload a picture of the leaf to the website by dragging it to the upload square</p>
+            <p>3. Submit photo and learn if your plant has any health issues that you need to attend to
+            </p>
+        </div>
+        <br>
+        <br>
+        <div class="hero">
+            <form name = "passdata" action="/upload" method="post" enctype="multipart/form-data">
+            <label for="input-file" id="drop-area">
+                <input type="file" accept="image/*" id="input-file" name="input-file" hidden>
+                <div id="img-view">
+                    <img src="{{ url_for('static', filename='img/508-icon.png') }}">
+                    <p>Drag and drop or click here <br> to upload image</p>
+                        <span>Upload any images from desktop<span>
+                </div>
+            </label>
+            <br>
+            <input id="button" type="submit" value="Diagnose" style = "">
+            </form>
+        </div>
+        <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class = "footer">hello</div>
+    </body>
+</html>

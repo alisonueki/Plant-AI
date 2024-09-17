@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/styles.css') }}"
+    />
+  </head>
+  <body id="home">
+    <nav class="navbar">
+      <!-- LOGO -->
+      <div class="logo">
+        <img
+          src="{{ url_for('static', filename='img/bulba_logo.png') }}"
+          style="width: 100px"
+        />
+      </div>
+      <!-- NAVIGATION MENU -->
+      <ul class="nav-links">
+        <!-- NAVIGATION MENUS -->
+        <div class="menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/upload">Upload</a></li>
+          <li><a href="/response">Response</a></li>
+          <li><a href="/response">Contact</a></li>
+        </div>
+      </ul>
+    </nav>
+
+    <!--https://www.geeksforgeeks.org/how-to-upload-files-using-html-to-website/#-->
+    <div class="upload" style="width: 20%; height: 50%"></div>
+    <br />
+    <br />
+    <br />
+    <div style="background-color: #bee8d3; width: 30%; float: left">
+      <p style="font-size: 20px">
+        Here is an example of descriptive sentences that AI model will generate
+        to help diagnose plant health
+      </p>
+      <br />
+      <br />
+    </div>
+    <div
+      style="
+        background-color: #bee8d3;
+        width: 50%;
+        float: right;
+        margin: 0 25px;
+      "
+    >
+      <p style="font-size: 25px">{{ my_variable }}</p>
+      <img
+        src="{{ url_for('static', filename=image_path) }}"
+        alt="Uploaded Image"
+      />
+    </div>
+    <div
+      style="
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        background-color: black;
+        bottom: 0px;
+      "
+    ></div>
+    <div
+      style="
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        background-color: rgb(222, 248, 246);
+        bottom: 0px;
+      "
+    ></div>
+  </body>
+</html>
